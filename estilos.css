@@ -1,0 +1,459 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* header */
+
+header {
+    background-color: #0A1061;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+header .header__logo {
+    height: 7rem;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header__logo a {
+    padding: 5px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-family:'Monoton', cursive;
+}
+
+header .mostrar__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2rem;
+    background-color: #0A1061;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+input#menu {
+    display: none;
+}
+
+header button.mostrar__menu:hover {
+    box-shadow: 0 0 10px rgba(0, rgb(33, 59, 33), 0, 0.5);
+}
+
+input#menu:checked ~ .navegador__menu {
+    display: block;
+}
+
+header .navegador__menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0A1061;
+}
+
+header .navegador__menu .cerrar__menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+}
+header .cerrar__menu i {
+    color: black;
+}
+
+header .navegador__menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+header .navegador__menu ul li {
+    list-style: none;
+    border-radius: 7px;
+}
+
+header .navegador__menu ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+@media screen and (min-width:990px) {
+    
+    header {
+        height: 5rem;
+    }
+
+    header .mostrar__menu {
+        display: none;
+    }
+
+    header .navegador__menu .cerrar__menu {
+        display: none;
+    }
+
+    header .navegador__menu {
+        display: flex;
+        position: inherit;
+        padding-left: 80px;
+        background-color: #0A1061;
+        width: 90%;
+        height: 90%;
+    }
+
+    header .navegador__menu ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    header .navegador__menu ul li a {
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    header .navegador__menu ul li a:hover {
+        background-color: #1826ED;
+        color: white;
+    }
+}
+
+
+/* Footer */
+
+footer {
+    height: 10rem;
+    background-color: #0A1061;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+footer p {
+    font-size: 15px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+footer .footer__redes {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+footer .footer__redes a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    color: white;
+    border-radius: 20%;
+    border-radius: 50%;
+    transition: all 0.8s ;
+}
+
+footer p {
+    color: white;
+}
+
+@media screen and (min-width:900px) {
+    footer {
+        height: 5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    footer .footer__redes a:hover {
+        color:#0A1061;
+        background-color: white;
+        transform: scale(1.2);
+    }
+
+    footer .footer__redes a {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+/* Main */
+
+.home__contenedora .home__presentacion{
+    min-height: 90vh;
+    /* background: rgba(0, 0, 0, 0.411) url(img/78689809.jpg); */
+    background: rgba(0, 0, 0, 0.411) url(img/fon1.webp);
+    
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes animacionh1 {
+    0% { left: -100%;}
+    100% {left: 0;}
+}
+
+.home__contenedora .home__presentacion h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    position: relative;
+    animation-name: animacionh1;
+    animation-duration: 2s;
+    font-family:'Monoton', cursive;
+}
+
+/* Nosotros */
+
+.nosotros__uno {
+    width: 80%;
+    margin: 1rem auto;
+    align-items: center;
+    border-radius: 5px;;
+}
+
+.nosotros__nosotros {
+    margin-top: 5px;
+    padding: 0 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.nosotros__nosotros h3 {
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+    border-bottom: 0.5rem solid #0A1061; 
+}
+
+.nosotros__uno .nosotros__texto,
+.nosotros__uno .nosotros__imagenes {
+    padding: 2rem;
+}
+
+.nosotros__texto p {
+    padding-top: 1rem;
+    text-align: justify;
+}
+
+.nosotros__imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.nosotros__texto strong {
+    font-size: 2rem;
+}
+
+@media screen and (min-width:900px) {
+   .nosotros__uno {
+       display: flex;
+       flex-direction: row;
+       height: 500px;
+   } 
+   .nosotros__uno .nosotros__texto,
+   .nosotros__uno .nosotros__imagenes {
+       width: 50%;
+   }
+
+   .nosotros__uno .nosotros__texto p {
+       font-size: 15px;
+   }
+
+   .nosotros__uno .nosotros__imagenes {
+       height: 500px;
+   }
+
+}
+
+
+/* habitaciones */
+
+.hab__texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hab__texto h3 {
+    color: black;
+    font-size: 50px;
+}
+
+@keyframes animacionhab {
+    0% { left: -100%;}
+    100% {left: 0;}
+}
+
+@keyframes animacionder {
+    0% { right: -100%;}
+    100% {right: 0;}
+}
+
+.habitacion__izquierda {
+    position: relative;
+    animation-name: animacionhab;
+    animation-duration: 3s;
+}
+
+
+.habitacion__derecha {
+    position: relative;
+    animation-name: animacionder;
+    animation-duration: 3s;
+}
+
+.img__habitaciones {
+    border-radius: 5px;
+}
+
+/* Restaurante */
+
+.restaurante__titulo {
+    margin-top: 5px;
+    padding: 0 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.restaurante__titulo h3 {
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+    border-bottom: 0.5rem solid #0A1061; 
+}
+
+
+
+@media screen and (min-width:990px) {
+
+    .aumentar {
+        transition: transform 0.5s;
+    }
+    
+    .aumentar:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+/*        Reserva        */
+
+.reserva__formulario {
+    min-height: 90vh;
+    height: 100%;
+    width: 100%;
+} 
+
+.titulo__reserva {
+    margin-top: 5px;
+    padding: 0 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.titulo__reserva h3 {
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+    border-bottom: 0.5rem solid #0A1061; 
+}
+
+.reserva__formulario .formulario__reserva{
+    margin: 20px 5px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.formulario__reserva .formu__label {
+    margin:5px;
+    font-size: 0.8em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.formulario__reserva .formu__input {
+    border: none;
+    border-bottom: 2px solid #0A1061;
+    border-radius: 20px;
+    width: 100%;
+    padding: 7px;
+    margin-top: 5px;
+}
+
+.formulario__reserva .formu__boton {
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-top: 2vh;
+    padding: 0.6vh;
+    color: white;
+    background-color: #0A1061;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    justify-self: center;
+}
+
+
+
+@media screen and (min-width:770px) {
+    .reserva__formulario .titulo__reserva{
+        font-size: 2.5em;
+    }
+
+    .formulario__reserva .formu__label {
+        font-size: 1em;
+    }
+
+    .formulario__reserva .formu__input {
+        width: 400px;
+    }
+
+    .formulario__reserva .formu__boton {
+        cursor: pointer;
+        width: 5rem;
+    }
+    
+    .formulario__reserva  button:hover {
+        background-color: #1624E0;
+        color: black;
+    }
+
+} 
