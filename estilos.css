@@ -177,7 +177,6 @@ footer .footer__redes a {
     height: 3rem;
     font-size: 2rem;
     color: white;
-    border-radius: 20%;
     border-radius: 50%;
     transition: all 0.8s ;
 }
@@ -192,13 +191,13 @@ footer p {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     footer .footer__redes a:hover {
-        color:black;
+        color:#de0a26;
         background-color: white;
-        transform: scale(1.2);
+        transform: scale(0.8);
     }
 
     footer .footer__redes a {
@@ -553,11 +552,15 @@ footer p {
     .formulario__reserva .formu__boton {
         cursor: pointer;
         width: 5rem;
+        transition: all 30s;
+        
     }
     
     .formulario__reserva  button:hover {
         background-color: rgba(209, 44, 44, 0.863);
         color: black;
+        animation: wobble; 
+        animation-duration: 5s;
     }
 
 } 
