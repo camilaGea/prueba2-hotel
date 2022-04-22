@@ -5,10 +5,12 @@
     font-family: 'Nunito', sans-serif;
 }
 
+
+
 /* header */
 
 header {
-    background-color: #0A1061;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,6 +18,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 999;
+    box-shadow: 0px 22px 26px -4px rgba(0,0,0,0.1);
 }
 
 header .header__logo {
@@ -30,7 +33,7 @@ header .header__logo a {
     padding: 5px;
     font-size: 1.5rem;
     text-decoration: none;
-    color: white;
+    color: #de0a26;
     font-family:'Monoton', cursive;
 }
 
@@ -41,7 +44,7 @@ header .mostrar__menu {
     width: 2.5rem;
     height: 2.5rem;
     font-size: 2rem;
-    background-color: #0A1061;
+    background-color: #de0a26;
     color: white;
     cursor: pointer;
     border: none;
@@ -66,7 +69,7 @@ header .navegador__menu {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0A1061;
+    background-color: rgb(209, 44, 44);
 }
 
 header .navegador__menu .cerrar__menu {
@@ -76,7 +79,7 @@ header .navegador__menu .cerrar__menu {
     font-size: 1.5rem;
 }
 header .cerrar__menu i {
-    color: black;
+    color: white;
 }
 
 header .navegador__menu ul {
@@ -118,7 +121,7 @@ header .navegador__menu ul li a {
         display: flex;
         position: inherit;
         padding-left: 80px;
-        background-color: #0A1061;
+        background-color: white;
         width: 90%;
         height: 90%;
     }
@@ -129,13 +132,13 @@ header .navegador__menu ul li a {
     }
 
     header .navegador__menu ul li a {
-        color: white;
+        color: black;
         border-radius: 5px;
         padding: 5px;
     }
 
     header .navegador__menu ul li a:hover {
-        background-color: #1826ED;
+        background-color: rgba(209, 44, 44, 0.863);
         color: white;
     }
 }
@@ -145,7 +148,7 @@ header .navegador__menu ul li a {
 
 footer {
     height: 10rem;
-    background-color: #0A1061;
+    background-color: #de0a26;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -193,7 +196,7 @@ footer p {
     }
 
     footer .footer__redes a:hover {
-        color:#0A1061;
+        color:black;
         background-color: white;
         transform: scale(1.2);
     }
@@ -237,6 +240,99 @@ footer p {
     font-family:'Monoton', cursive;
 }
 
+
+.home__bienvenido {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255,255, 0.55);
+}
+
+.contenido__bienvenido {
+    min-height: 200px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.contenido__bienvenido h3 {
+    color: rgba(209, 44, 44, 0.863);
+}
+
+
+
+
+.home__servicios {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(209, 44, 44, 0.863);
+}  
+
+.servicio__titulo {
+    padding: 20px;
+    height: 50px;
+}
+
+.servicio__titulo h3 {
+    color: white;
+    text-align: center;
+    
+}
+
+.contenido__servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 40px 40px 0px 40px;
+} 
+
+.servicio {
+   margin: 20px 0;
+}
+.servicio h3 {
+    color: white;
+    font-size: 20px;
+}
+
+.servicio p {
+    color: rgba(255, 255,255, 0.55);
+    font-size: 15px;
+}
+
+.servicio i {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+@media screen and (min-width:900px) {
+
+    .contenido__servicios {
+        flex-direction: row;
+        padding: 50px 50px 50px 50px;
+    }
+
+    .servicio {
+        margin: 0px 10px;
+    }
+
+    .carousel, .carousel-inner > .carousel-item {
+        height: 500px;
+    }
+
+}
+
+
+
+
+
+
+
 /* Nosotros */
 
 .nosotros__uno {
@@ -256,7 +352,7 @@ footer p {
 .nosotros__nosotros h3 {
     font-size: 3rem;
     font-family: 'Bebas Neue', cursive;
-    border-bottom: 0.5rem solid #0A1061; 
+    border-bottom: 0.5rem solid #de0a26; 
 }
 
 .nosotros__uno .nosotros__texto,
@@ -355,12 +451,20 @@ footer p {
 .restaurante__titulo h3 {
     font-size: 3rem;
     font-family: 'Bebas Neue', cursive;
-    border-bottom: 0.5rem solid #0A1061; 
+    border-bottom: 0.5rem solid #de0a26; 
 }
 
 
 
 @media screen and (min-width:990px) {
+
+    .restaurante__texto1 {
+        border-left: 2px solid  red;
+    }
+
+    .restaurante__texto2 {
+        border-right: 2px solid red;
+    }
 
     .aumentar {
         transition: transform 0.5s;
@@ -391,7 +495,7 @@ footer p {
 .titulo__reserva h3 {
     font-size: 3rem;
     font-family: 'Bebas Neue', cursive;
-    border-bottom: 0.5rem solid #0A1061; 
+    border-bottom: 0.5rem solid #de0a26; 
 }
 
 .reserva__formulario .formulario__reserva{
@@ -411,7 +515,7 @@ footer p {
 
 .formulario__reserva .formu__input {
     border: none;
-    border-bottom: 2px solid #0A1061;
+    border-bottom: 2px solid #de0a26;
     border-radius: 20px;
     width: 100%;
     padding: 7px;
@@ -424,7 +528,7 @@ footer p {
     margin-top: 2vh;
     padding: 0.6vh;
     color: white;
-    background-color: #0A1061;
+    background-color: #de0a26;
     border-radius: 5px;
     border: none;
     text-align: center;
@@ -452,7 +556,7 @@ footer p {
     }
     
     .formulario__reserva  button:hover {
-        background-color: #1624E0;
+        background-color: rgba(209, 44, 44, 0.863);
         color: black;
     }
 
