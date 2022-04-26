@@ -1,0 +1,83 @@
+/* reserva */
+
+main{
+    .reserva__formulario{
+        min-height: 90vh;
+        height: 100%;
+        width: 100%;
+        .titulo__reserva {
+            margin-top: 5px;
+            padding: 0 50px;
+            text-transform: uppercase;
+            text-align: center;
+
+            h3 {
+                font-size: 3rem;
+                font-family: 'Bebas Neue', cursive;
+                border-bottom: 0.5rem solid #de0a26; 
+            }
+        }
+
+        .formulario__reserva{
+            margin: 20px 5px;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+
+            .formu__label {
+                margin:5px;
+                font-size: 0.8em;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .formu__input {
+                border: none;
+                border-bottom: 2px solid #de0a26;
+                border-radius: 20px;
+                width: 100%;
+                padding: 7px;
+                margin-top: 5px;
+            }
+            .formu__boton {
+                text-transform: uppercase;
+                font-size: 1em;
+                margin-top: 2vh;
+                padding: 0.6vh;
+                color: white;
+                background-color: #de0a26;
+                border-radius: 5px;
+                border: none;
+                text-align: center;
+                justify-self: center;
+            }
+        }
+    }
+
+}
+@media screen and (min-width:770px) {
+    .reserva__formulario{
+        .titulo__reserva{
+            font-size: 2.5em;
+        }
+        .formulario__reserva{
+            .formu__label {
+                font-size: 1em;
+            }
+            .formu__input {
+                width: 400px;
+            }
+            .formu__boton {
+                cursor: pointer;
+                width: 5rem;
+                transition: all 30s;
+                
+                &:hover{
+                    background-color: rgba(209, 44, 44, 0.863);
+                    color: black;
+                    animation: wobble; 
+                    animation-duration: 5s;
+                }
+            }
+        }
+    }
+}

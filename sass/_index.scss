@@ -1,0 +1,117 @@
+/* Index */
+
+main {
+    .home__presentacion {
+        min-height: 90vh;
+        /* background: rgba(0, 0, 0, 0.411) url(../img/fon1.webp); */
+        background: rgba(0,0,0,0.41) url(../img/15852406.jpg);
+        background-blend-mode: darken;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            width: 100%;
+            position: relative;
+            animation-name: animacionh1;
+            animation-duration: 2s;
+            font-family:'Monoton', cursive;
+        }
+        
+        
+        @keyframes animacionh1 {
+            0% { left: -100%;}
+            100% {left: 0;}
+        }
+    }
+
+    .home__bienvenido {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255,255, 0.55);
+        
+        .contenido__bienvenido {
+            min-height: 200px;
+            margin: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;  
+
+            h3 {
+                color: rgba(209, 44, 44, 0.863);
+            }
+        }
+    }
+
+    .home__servicios {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(209, 44, 44, 0.863);
+        
+        .servicio__titulo {
+            padding: 20px;
+            height: 50px;
+
+            h3 {
+                color: white;
+                text-align: center;
+            }
+        }
+    
+    }
+
+    .contenido__servicios {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding: 40px 40px 0px 40px;
+
+        .servicio {
+            margin: 20px 0;
+        
+            h3 {
+                color: white;
+                font-size: 20px;
+            }
+            p {
+                color: rgba(255, 255,255, 0.55);
+                font-size: 15px;
+            }
+
+            i {
+                color: white;
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+        }
+
+    } 
+    
+}
+@media screen and (min-width:900px) {
+    main {
+        .home__servicios {
+            .contenido__servicios{
+                flex-direction: row;
+                padding: 50px 50px 50px 50px;
+                
+                .servicio {
+                    margin: 0px 10px;
+                }
+            }
+        }
+        .carousel, .carousel-inner > .carousel-item {
+            height: 500px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+
+/* habitaciones */
+.container {
+    .nosotros__nosotros {
+        margin-top: 5px;
+        padding: 0 50px;
+        text-transform: uppercase;
+        text-align: center;
+        
+        h3 {
+            font-size: 3rem;
+            font-family: 'Bebas Neue', cursive;
+            border-bottom: 0.5rem solid #de0a26;   
+        }
+    }
+
+    .habitacion__izquierda {
+        position: relative;
+        animation-name: animacionhab;
+        animation-duration: 3s;
+
+        @keyframes animacionhab {
+            0% { left: -100%;}
+            100% {left: 0;}
+        }
+
+        .hab__texto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                color: black;
+                font-size: 50px;
+            }
+        }
+
+        .img__habitaciones {
+            border-radius: 5px;
+        }
+    }
+
+    .habitacion__derecha {
+        position: relative;
+        animation-name: animacionder;
+        animation-duration: 3s;
+
+        @keyframes animacionder {
+            0% { right: -100%;}
+            100% {right: 0;}
+        }
+
+        .hab__texto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                color: black;
+                font-size: 50px;
+            }
+        }
+        .img__habitaciones {
+            border-radius: 5px;
+        }
+    }
+
+}
